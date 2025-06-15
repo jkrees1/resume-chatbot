@@ -1,0 +1,53 @@
+James Rees
+Syracuse NY, 13210 • (847) 508 2739 • jkrees@syr.edu • LinkedIn: JK Rees
+J.K. Rees is committed to researching and implementing digital transformation solutions that create positive media impacts for all markets. This includes unlocking the value of data activation & governance, AI workflow strategy and media technology research. 
+
+PROFFESIONAL ACCOMPLISHMENTS
+Completed A 44-Page Research Report on Synthetic Media Business Operations For Graduate Independent Study Course
+•	Compiled 100+ relevant industry sources & reports on Generative-AI impact on social, economic & labor markets
+•	Designed and outlined report on technical structure, market analysis, AI industry risks & media business management
+Presented Preliminary Data Privacy Research Findings & Operation Method to Exclusive Syracuse University Alumni 
+•	Critiqued preliminary qualitative & contextual findings on academic data privacy through a public policy framework
+•	Walked through operational method to compile secondary research for monograph drafting & primary research outreach	
+Built YoY Media Planning and Budgeting Campaign Capstone for Milwaukee Business Client
+•	Identified audience segment research using Nielson, GWI, MRI Simmons data to deploy $1,000,000 media budget
+•	Used dynamic Excel formulas using current market data to breakdown CPM, CPC, ROAS, GPRs, Frequency, Reach
+EDUCATIONAL EXPERIENCE
+Syracuse University – S.I. Newhouse School of Public Communications                             	Syracuse, NY
+Master of Science – Advanced Media Management 	Jul 2025
+GPA: 3.91
+Business Analytics, Financial Accounting, SQL Database Management, Gen-AI for Media, Cloud Technology, Media Business 
+Marquette University – Diedrich College of Communication	Milwaukee, WI
+Bachelor of Arts – Advertising, Economics minor	May 2023
+GPA: 3.49
+WORK EXPERIENCE
+Syracuse University	Syracuse, NY
+Data Privacy Research Assistant	Sep 2024 – Current
+•	Research 40+ scholarly literature reviews on data privacy, legislation & strategy within US / GDPR media frameworks 
+•	Fact checks ongoing 120-page monograph & key data points to maintain academic IRB rigor of research business findings
+•	Build qualitative data analysis reports analyzing up to 100+ keywords & visualized semantic patterns using NVivo software
+Get Real LLC	Syracuse, NY
+Product Management Intern – AI SaaS Startup Focused on News and Information Tracking	May 2025 – Jul 2025
+•	Create & pitch product lead generation strategies for the Diderot browser app to influence MVP pre-seed funding round
+•	Use Agile to collaborate with AI/ML team to align feature developments that grew new user acquisition group by 38.1% 
+•	Leveraged 1st party data activation strategies to validate product development and personalization with audience clustering
+The Palmer Group	Syracuse, NY
+2025 CES Research Fellow 	Oct 2024 – Jan 2025
+•	Selected as an exclusive media analyst under Shelly Palmer, CEO of The Palmer Group, to meet work clients in Las Vegas 
+•	Researched CES companies along the AI, Content and Entertainment, Digital Health & 5G verticals for client reporting
+•	Discussed weekly written reports to our internal team with four other SU students on a 6-week trajectory leading up to CES  
+WPP	Chicago, IL
+Search Engine Optimization Associate – Ford Motor Client 	Jun 2023 – May 2024
+•	Managed 1,480 hours of technical SEO content & on-page strategy for Ford Motor’s US & CA domains for over 20 vehicles
+•	Aggregated, cleaned & analyzed 1,000+ keywords with Excel macros or Google Looker from live web traffic scraping 
+•	Created JSON-LD schema for SERP rich result implementation based on Document Object Model (DOM) clearance
+•	Built monthly or quarterly data visualization performance reports combining Google Looker & Google Search Console 
+•	Conducted website audits and on-page optimization analysis using web crawler software for business intelligence problems
+SKILLS & CERTIFICATIONS
+Tech Skills: HTML5, JSON-LD, JIRA, SQL, R, Tableau, Power BI, Power Query, SEMrush, GA4, AWS, Azure, Azure Studio
+Certifications:
+•	Amazon Cloud Marketing Fundamentals | DSP & SSP campaigns, SQL querying, AdTech attribution reporting
+•	Microsoft Career Essentials in Generative AI & Data Analytics | ETL into Power BI, AI model architectures, ethical AI
+•	IAS Programmatic Media Quality | Contextual targeting, brand safety, viewability optimization, bidding fundamental
+•	MOS 365 Excel Associate | Data structuring & cleaning, conditional aggregation formulas, Pivot tables & charts
+•	Microsoft Azure AI Fundamentals | AZ-900 | Introduction to Azure AI services, NLP, Data Mining, Sentiment Analysis
