@@ -1,57 +1,51 @@
 // app/api/chat/route.js
-import fs from 'fs';
-import path from 'path';
-import cosineSimilarity from 'cosine-similarity';
-import { OpenAI } from 'openai';
+import fs from "fs";
+import path from "path";
+import cosineSimilarity from "cosine-similarity";
 
-// load env for serverless edge/Node
-import 'dotenv/config';
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-// -------  Load embeddings into memory once -------- //
+// ---- load embeddings once (sync) ----
 const embeddings = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'embeddings.json'))
+  fs.readFileSync(path.join(process.cwd(), "embeddings.json"), "utf8")
 );
 
-// utility: get top-N chunks by cosine similarity
-function retrieveContext(queryEmbedding, topN = 3) {
-  const ranked = embeddings
-    .map((e) => ({
-      ...e,
-      score: cosineSimilarity(queryEmbedding, e.vector),
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, topN);
-
-  return ranked.map((r) => r.text).join('\n---\n');
-}
-
-// -------- POST handler -------- //
+// --------------------------------------
+// POST /api/chat  — runtime handler
+// --------------------------------------
 export async function POST(req) {
-  const { question } = await req.json();
+  // 1. Lazy‑load OpenAI client **inside** the handler so build time doesn’t need the key
+  const { OpenAI } = await import("openai");
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-  // 1 embed the user question
-  const qEmbedResp = await openai.embeddings.create({
-    model: 'text-embedding-ada-002',
+  // 2. Parse user question from the request body
+  const { question } = await req.json();
+  if (!question) return new Response("Missing question", { status: 400 });
+
+  // 3. Embed the user query
+  const { data: embedData } = await openai.embeddings.create({
+    model: "text-embedding-ada-002", // fast + cheap for vectors
     input: question,
   });
-  const qVector = qEmbedResp.data[0].embedding;
+  const qVector = embedData[0].embedding;
 
-  // 2 retrieve relevant chunks
-  const context = retrieveContext(qVector, 3);
+  // 4. Retrieve the most relevant chunks (top‑3 by cosine similarity)
+  const context = embeddings
+    .map((e) => ({ ...e, score: cosineSimilarity(qVector, e.vector) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((e) => e.text)
+    .join("\n---\n");
 
-  // 3 ask Chat Completion
+  // 5. Ask GPT‑4o‑mini (a.k.a. 4.1‑mini)
   const chatResp = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
+    model: "gpt-4o-mini",
     messages: [
       {
-        role: 'system',
+        role: "system",
         content:
-          'You are a helpful assistant that ONLY answers from the following resume excerpts. Your goal as a helpful assistant is to market yourself as smart, excited and eager for work. If the answer is not contained, say you do not know.\n' +
+          "You are a helpful assistant who ONLY answers using the following resume excerpts. Market yourself as smart, excited, and eager for work. If the information isn’t in the excerpts, say you don’t know.\n" +
           context,
       },
-      { role: 'user', content: question },
+      { role: "user", content: question },
     ],
   });
 
