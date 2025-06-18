@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',      // App Router pages
+    './pages/**/*.{js,ts,jsx,tsx}',    // Pages Router pages
+    './components/**/*.{js,ts,jsx,tsx}'// Any shared components
+  ],
   theme: {
-    extend: {},
+    extend: {},                        // Add custom theming here
   },
-  plugins: [],
-}
-
+  plugins: [],                         // Add Tailwind plugins here
+};
