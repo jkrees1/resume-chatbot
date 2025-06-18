@@ -37,7 +37,7 @@ export default function ChatPage() {
     >
       <div className="w-full max-w-xl flex flex-col">
         <h1 className="text-3xl font-heading font-bold mb-4">
-          Ask My Resume
+          Ask me a question
         </h1>
 
         <div className="flex-1 overflow-auto border rounded-lg bg-white p-4 mb-4">
