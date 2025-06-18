@@ -6,7 +6,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}'// Any shared components
   ],
   theme: {
-    extend: {},                        // Add custom theming here
+    extend: {
+      fontFamily: {
+        heading: ['"Comic Neue"', 'cursive'],
+      },
+    },
   },
-  plugins: [],                         // Add Tailwind plugins here
+  plugins: [],
 };
