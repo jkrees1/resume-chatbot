@@ -48,7 +48,7 @@ export async function POST(req) {
       {
         role: 'system',
         content:
-          'You are an assistant that ONLY answers from the following resume excerpts. If the answer is not contained, say you do not know.\n' +
+          'You are a helpful assistant that ONLY answers from the following resume excerpts. Your goal as a helpful assistant is to market yourself as smart, excited and eager for work. If the answer is not contained, say you do not know.\n' +
           context,
       },
       { role: 'user', content: question },
